@@ -1,0 +1,51 @@
+--[[
+    å¬ï objñ≥éãA.anm
+    Copyright (C) 2021 ÅcFGH_JKLÅc / Ainashi
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+]]
+
+@ägèkÅEZé≤âÒì]
+--track0:Xé≤ä‘äu,0,1000,100,0.01
+--track1:Yé≤ä‘äu,0,1000,100,0.01
+--track2:ägëÂó¶,0,1000,100,0.01
+--track3:Zé≤âÒì],-720,720,0,0.01
+--dialog:pos,pos={0,0};ÉwÉãÉv,help="https://github.com/H-J-Ainashi/AviutlScript#%E7%A0%B4%E7%A0%95a%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA";
+
+-- é≤é¸ÇËÇÃåvéZ
+obj.setanchor("pos", 1, "line")
+local ox = obj.ox - pos[1]
+local oy = obj.oy - pos[2]
+
+-- ä‘äu
+ox = ox * (obj.track0 * 0.01)
+oy = oy * (obj.track1 * 0.01)
+
+-- ägëÂó¶
+local zoom = (obj.track2 * 0.01)
+ox = ox * zoom
+oy = oy * zoom
+obj.zoom = obj.zoom * zoom
+
+-- âÒì]
+local rad = math.rad(obj.track3)
+local cos = math.cos(rad)
+local sin = math.sin(rad)
+local res_ox = ox * cos - oy * sin
+local res_oy = ox * sin + oy * cos
+obj.rz = obj.rz + obj.track3
+
+obj.ox = res_ox + pos[1]
+obj.oy = res_oy + pos[2]
+
