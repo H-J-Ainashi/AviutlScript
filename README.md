@@ -9,6 +9,9 @@
         * [余剰部分](https://github.com/H-J-Ainashi/AviutlScript#%E4%BD%99%E5%89%B0%E9%83%A8%E5%88%86)
         * [進行度](https://github.com/H-J-Ainashi/AviutlScript#%E9%80%B2%E8%A1%8C%E5%BA%A6)
         * [間隔](https://github.com/H-J-Ainashi/AviutlScript#%E9%96%93%E9%9A%94)
+* [個別obj無視Aシリーズ](https://github.com/H-J-Ainashi/AviutlScript#%E5%80%8B%E5%88%A5obj%E7%84%A1%E8%A6%96a%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)
+    * [含まれている機能](https://github.com/H-J-Ainashi/AviutlScript#%E5%80%8B%E5%88%A5obj%E7%84%A1%E8%A6%96a%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)
+    * [ダウンロード](https://github.com/H-J-Ainashi/AviutlScript#%E5%80%8B%E5%88%A5obj%E7%84%A1%E8%A6%96a%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA)
 
 ## 破砕Aシリーズ
 　このスクリプトはオブジェクトを分割し、砕けたような演出を行うスクリプトです。
@@ -54,4 +57,4 @@
 * **拡縮およびZ軸回転サポート**
 
 ### ダウンロード
-* [Version 1]()
+* [Version 1](https://github.com/H-J-Ainashi/AviutlScript/brob/main/%E5%80%8B%E5%88%A5obj%E7%84%A1%E8%A6%96A/%40%E5%80%8B%E5%88%A5obj%E7%84%A1%E8%A6%96A.zip?raw=true)
