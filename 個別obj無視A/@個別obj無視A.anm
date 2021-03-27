@@ -21,7 +21,7 @@
 --track1:YŽ²ŠÔŠu,0,1000,100,0.01
 --track2:Šg‘å—¦,0,1000,100,0.01
 --track3:ZŽ²‰ñ“],-720,720,0,0.01
---dialog:pos,pos={0,0};ƒwƒ‹ƒv,help="https://github.com/H-J-Ainashi/AviutlScript#%E7%A0%B4%E7%A0%95a%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA";
+--dialog:pos,pos={0,0};ƒwƒ‹ƒv,help="https://github.com/H-J-Ainashi/AviutlScript#%E5%80%8B%E5%88%A5obj%E7%84%A1%E8%A6%96a%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA";
 
 -- Ž²Žü‚è‚ÌŒvŽZ
 obj.setanchor("pos", 1, "line")
