@@ -1,0 +1,59 @@
+--[[
+    ‚È‚ñ‚Å‚àÎ‘ÌA.anm
+    Copyright (C) 2021 cFGH_JKLc / Ainashi
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+]]
+
+@Î‘Ì‰»
+--track0:Šp“x,-85,85,30,0.01
+--check0:c•ûŒü,0
+--dialog:pos,pos{0,0};
+
+-- ²ü‚è‚ÌŒvZ
+obj.setanchor("pos", 1, "line")
+local position = {
+    x = math.max(-obj.w - obj.cx, math.min(obj.w - obj.cx, pos[1])),
+    y = math.max(-obj.h - obj.cy, math.min(obj.h - obj.cy, pos[2]))
+}
+local rad = math.rad(obj.track0)
+local tan = math.tan(rad)
+
+local center = {
+    x = obj.cx,
+    y = obj.cy
+}
+
+if (obj.check0) then    -- c‘‚«
+    center.y = obj.cy - (obj.w * tan)
+    obj.effect("—ÌˆæŠg’£","ã", math.max(-obj.w * tan, 0) + 1, "‰º", math.max(obj.w * tan, 0) + 1)
+else
+    center.x = obj.cx - (obj.h * tan)
+    obj.effect("—ÌˆæŠg’£","¶", math.max(-obj.h * tan, 0) + 1, "‰E", math.max(obj.h * tan, 0) + 1)
+end
+
+-- ƒ‰ƒCƒuƒ‰ƒŠ‚ğæ“¾
+require("ObliqueA")
+local userdata, w, h = obj.getpixeldata()
+local a = ObliqueA.Oblique(userdata, w, h, tan, obj.check0)
+
+obj.load("text", a)
+obj.draw()
+
+--[[
+obj.putpixeldata(userdata)
+]]
+obj.cx = center.x
+obj.cy = center.y
+
