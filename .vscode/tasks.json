@@ -5,16 +5,17 @@
             "label": "C/C++: g++.exe アクティブなファイルのビルド",
             "command": "C:\\msys64\\mingw32\\bin\\g++.exe",
             "args": [
-                "-g",
                 "-std=c++20",
                 "-m32",
+                "-shared",
                 "${file}",
                 "-L",
                     "${workspaceFolder}\\libraries\\lua\\lua5.1.lib",
                 "-I",
                     "${workspaceFolder}\\libraries\\lua\\include",
+                    "${workspaceFolder}\\libraries\\header",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.dll"
             ],
             "options": {
                 "cwd": "C:\\msys64\\mingw32\\bin"
