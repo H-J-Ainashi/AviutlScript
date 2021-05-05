@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}",
+                "C:\\msys64\\MinGW32\\include",
+                "${workspaceFolder}\\libraries\\lua\\include"
+            ],
+            "compilerPath": "C:\\msys64\\mingw32\\bin\\g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x86"
+        }
+    ],
+    "version": 4
+}
