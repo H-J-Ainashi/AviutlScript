@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}",
                 "C:\\msys64\\MinGW32\\include",
-                "${workspaceFolder}\\libraries\\lua\\include"
+                "${workspaceFolder}\\libraries\\lua\\include",
+                "${workspaceFolder}\\libraries\\header"
             ],
             "compilerPath": "C:\\msys64\\mingw32\\bin\\g++.exe",
             "cStandard": "c17",
