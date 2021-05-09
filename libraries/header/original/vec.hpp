@@ -1,5 +1,5 @@
 /*
-    vec.anm
+    vec.hpp
     Copyright (C) 2021 …FGH_JKL… / Ainashi
 
     This program is free software: you can redistribute it and/or modify
@@ -20,9 +20,8 @@
     Type& Name() { return base[idx]; } \
     Type  Name() const { return base[idx]; }
 
-#include <cstddef>
-
 /* Type Definites */
+
 template<typename Ty, size_t Sz>
 struct Vec {
 private:
@@ -40,11 +39,20 @@ public:
     }
 };
 
-template<typename Ty>
-struct Argb : Vec<Ty, 4> {
-public:
-    ColVal(Ty, Blue, 0);
-    ColVal(Ty, Green, 1);
-    ColVal(Ty, Red, 2);
-    ColVal(Ty, Alpha, 3);
+/* Concepts */
+
+using namespace std;
+
+template<typename T, size_t channel>
+concept CPixel = 
+    default_initializable<T> &&
+    assignable_from<T, T> &&
+    requires {
+    typename T::Val;
+    derived_from<T, Vec<typename T::Val, channel>>;
 };
+
+#define PixelRule(PxType, ChannelNum) \
+template<typename PxType, size_t ChannelNum> \
+requires CPixel<PxType, ChannelNum>
+
