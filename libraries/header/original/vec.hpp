@@ -16,6 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+#pragma once
 #define ColVal(Type, Name, idx) \
     Type& Name() { return base[idx]; } \
     Type  Name() const { return base[idx]; }
